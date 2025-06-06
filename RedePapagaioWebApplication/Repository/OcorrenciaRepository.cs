@@ -16,10 +16,10 @@ namespace RedePapagaioWebApplication.Repository
         public async Task<IEnumerable<Ocorrencia>> GetAllAsync()
         {
             return await _context.Ocorrencias
-                .Include(o => o.StatusOcorrencia)  // Incluir StatusOcorrencia
-                .Include(o => o.NivelUrgencia)    // Incluir NivelUrgencia
-                .Include(o => o.Regiao)           // Incluir Regiao
-                .Include(o => o.TipoOcorrencia)   // Incluir TipoOcorrencia
+                .Include(o => o.StatusOcorrencia)  
+                .Include(o => o.NivelUrgencia)    
+                .Include(o => o.Regiao)          
+                .Include(o => o.TipoOcorrencia)   
                 .ToListAsync();
         }
 
