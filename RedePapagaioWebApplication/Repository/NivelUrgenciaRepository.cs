@@ -20,7 +20,7 @@ namespace RedePapagaioWebApplication.Repository
 
         public async Task<NivelUrgencia?> GetByIdAsync(int id)
         {
-            return await _context.NiveisUrgencia.FirstOrDefaultAsync(n => n.Id == id);
+            return await _context.NiveisUrgencia.FindAsync(id);
         }
 
         public async Task AddAsync(NivelUrgencia nivelUrgencia)

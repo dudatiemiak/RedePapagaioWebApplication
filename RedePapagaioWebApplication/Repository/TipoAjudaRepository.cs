@@ -20,7 +20,7 @@ namespace RedePapagaioWebApplication.Repository
 
         public async Task<TipoAjuda?> GetByIdAsync(int id)
         {
-            return await _context.TiposAjuda.FirstOrDefaultAsync(t => t.Id == id);
+            return await _context.TiposAjuda.FindAsync(id);
         }
 
         public async Task AddAsync(TipoAjuda tipoAjuda)

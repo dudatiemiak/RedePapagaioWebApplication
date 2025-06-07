@@ -20,7 +20,7 @@ namespace RedePapagaioWebApplication.Repository
 
         public async Task<Regiao?> GetByIdAsync(int id)
         {
-            return await _context.Regioes.FirstOrDefaultAsync(r => r.Id == id);
+            return await _context.Regioes.FindAsync(id);
         }
 
         public async Task AddAsync(Regiao regiao)

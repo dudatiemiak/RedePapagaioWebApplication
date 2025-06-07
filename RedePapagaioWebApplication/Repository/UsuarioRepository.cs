@@ -15,18 +15,12 @@ namespace RedePapagaioWebApplication.Repository
 
         public async Task<IEnumerable<Usuario>> GetAllAsync()
         {
-            return await _context.Usuarios
-                .Include(u => u.Telefones)  
-                .Include(u => u.Ajudas)    
-                .ToListAsync();
+            return await _context.Usuarios.ToListAsync();
         }
 
         public async Task<Usuario?> GetByIdAsync(int id)
         {
-            return await _context.Usuarios
-                .Include(u => u.Telefones)
-                .Include(u => u.Ajudas)
-                .FirstOrDefaultAsync(u => u.Id == id);
+            return await _context.Usuarios.FindAsync(id);
         }
 
         public async Task AddAsync(Usuario usuario)
@@ -49,18 +43,7 @@ namespace RedePapagaioWebApplication.Repository
 
         public async Task<IEnumerable<Usuario>> GetByNameAsync(string nome)
         {
-            return await _context.Usuarios
-                .Where(u => u.Nome.Contains(nome))  
-                .Include(u => u.Telefones)         
-                .Include(u => u.Ajudas)            
-                .ToListAsync();
+            return await _context.Usuarios.Where(u => u.Nome.Contains(nome)).ToListAsync();
         }
-
-        public async Task<Usuario?> GetByEmailAsync(string email)
-        {
-            return await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.Email == email);  
-        }
-
     }
 }

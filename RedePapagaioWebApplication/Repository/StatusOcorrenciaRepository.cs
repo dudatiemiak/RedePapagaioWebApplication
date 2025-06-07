@@ -20,7 +20,7 @@ namespace RedePapagaioWebApplication.Repository
 
         public async Task<StatusOcorrencia?> GetByIdAsync(int id)
         {
-            return await _context.StatusOcorrencias.FirstOrDefaultAsync(s => s.Id == id);
+            return await _context.StatusOcorrencias.FindAsync(id);
         }
 
         public async Task AddAsync(StatusOcorrencia statusOcorrencia)
