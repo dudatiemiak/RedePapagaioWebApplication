@@ -8,8 +8,11 @@ namespace RedePapagaioWebApplication.Models
         public int Id { get; set; }
 
         [Required, MaxLength(50)]
-        public string Nome { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public List<AjudaRealizada>? AjudasRealizadas { get; set; } = new List<AjudaRealizada>();
 
-        public ICollection<AjudaRealizada>? Ajudas { get; set; }
+        public TipoAjuda() { 
+            AjudasRealizadas = new List<AjudaRealizada>();
+        }
     }
 }
