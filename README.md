@@ -30,74 +30,68 @@ Aqui estão os diagramas que ilustram a arquitetura do sistema:
 
 #### **Diagrama de Classes**
 
-                         +----------------------+
-                         |    T_PPG_REGIAO      |
-                         +----------------------+
-                         | PK id_regiao         |
-                         | nm_regiao            |
-                         | nm_cidade            |
-                         | nm_estado            |
-                         | nm_pais              |
-                         +----------------------+
-                                  |
-                                  | FK
-                                  |
-                         +----------------------+
-                         |  T_PPG_OCORRENCIA    |
-                         +----------------------+
-                         | PK id_ocorrencia     |
-                         | FK id_status_ocorrencia
-                         | FK id_nivel_urgencia |
-                         | FK id_regiao         |
-                         | FK id_tipo_ocorrencia|
-                         | ds_ocorrencia        |
-                         +----------------------+
-                                  |
-                                  | FK
-                                  |
-                         +------------------------+
-                         |  T_PPG_AJUDA_REALIZADA |
-                         +------------------------+
-                         | PK id_ajuda            |
-                         | FK id_usuario          |
-                         | FK id_ocorrencia       |
-                         | FK id_tipo_ajuda       |
-                         | ds_ajuda               |
-                         | dt_ajuda               |
-                         +------------------------+
+```mermaid
+erDiagram
+    T_PPG_REGIAO {
+        int id_regiao PK
+        string nm_regiao
+        string nm_cidade
+        string nm_estado
+        string nm_pais
+    }
+    T_PPG_OCORRENCIA {
+        int id_ocorrencia PK
+        int id_status_ocorrencia FK
+        int id_nivel_urgencia FK
+        int id_regiao FK
+        int id_tipo_ocorrencia FK
+        string ds_ocorrencia
+    }
+    T_PPG_AJUDA_REALIZADA {
+        int id_ajuda PK
+        int id_usuario FK
+        int id_ocorrencia FK
+        int id_tipo_ajuda FK
+        string ds_ajuda
+        datetime dt_ajuda
+    }
+    T_PPG_STATUS_OCORRENCIA {
+        int id_status_ocorrencia PK
+        string nm_status
+    }
+    T_PPG_TIPO_OCORRENCIA {
+        int id_tipo_ocorrencia PK
+        string nm_tipo_ocorrencia
+    }
+    T_PPG_NIVEL_URGENCIA {
+        int id_nivel_urgencia PK
+        string nm_nivel
+    }
+    T_PPG_TIPO_AJUDA {
+        int id_tipo_ajuda PK
+        string nm_tipo_ajuda
+    }
+    T_PPG_USUARIO {
+        int id_usuario PK
+        string nm_usuario
+        string nm_email UQ
+        string nm_senha
+        datetime dt_cadastro
+    }
+    T_PPG_TELEFONE {
+        int id_telefone PK
+        string nr_telefone
+        string nr_ddd
+        string nr_ddi
+        int id_usuario FK
+    }
 
-+--------------------------+       +--------------------------+
-|    T_PPG_STATUS_OCORRENCIA |     |    T_PPG_TIPO_OCORRENCIA  |
-+--------------------------+       +--------------------------+
-| PK id_status_ocorrencia   |       | PK id_tipo_ocorrencia     |
-| UQ nm_status              |       | UQ nm_tipo_ocorrencia      |
-+--------------------------+       +--------------------------+
-
-+--------------------------+       +------------------------+
-|   T_PPG_NIVEL_URGENCIA    |       |   T_PPG_TIPO_AJUDA     |
-+--------------------------+       +------------------------+
-| PK id_nivel_urgencia      |       | PK id_tipo_ajuda        |
-| UQ nm_nivel               |       | UQ nm_tipo_ajuda         |
-+--------------------------+       +------------------------+
-
-                         +----------------------+
-                         |    T_PPG_USUARIO     |
-                         +----------------------+
-                         | PK id_usuario        |
-                         | nm_usuario           |
-                         | UQ nm_email          |
-                         | nm_senha             |
-                         | dt_cadastro          |
-                         +----------------------+
-                                  |
-                                  | FK
-                                  |
-                         +---------------------+
-                         |   T_PPG_TELEFONE    |
-                         +---------------------+
-                         | PK id_telefone      |
-                         | nr_telefone         |
-                         | nr_ddd              |
-                         | nr_ddi              |
-                         | FK id_usuario       |
-                         +---------------------+
+    T_PPG_REGIAO ||--o| T_PPG_OCORRENCIA : "Relacao"
+    T_PPG_OCORRENCIA ||--o| T_PPG_AJUDA_REALIZADA : "Relacao"
+    T_PPG_STATUS_OCORRENCIA ||--o| T_PPG_OCORRENCIA : "Relacao"
+    T_PPG_TIPO_OCORRENCIA ||--o| T_PPG_OCORRENCIA : "Relacao"
+    T_PPG_NIVEL_URGENCIA ||--o| T_PPG_OCORRENCIA : "Relacao"
+    T_PPG_TIPO_AJUDA ||--o| T_PPG_AJUDA_REALIZADA : "Relacao"
+    T_PPG_USUARIO ||--o| T_PPG_AJUDA_REALIZADA : "Relacao"
+    T_PPG_USUARIO ||--o| T_PPG_TELEFONE : "Relacao"
+```
