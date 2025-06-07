@@ -39,59 +39,59 @@ erDiagram
         string nm_estado
         string nm_pais
     }
+
     T_PPG_OCORRENCIA {
         int id_ocorrencia PK
-        int id_status_ocorrencia FK
-        int id_nivel_urgencia FK
-        int id_regiao FK
-        int id_tipo_ocorrencia FK
         string ds_ocorrencia
     }
+
     T_PPG_AJUDA_REALIZADA {
         int id_ajuda PK
-        int id_usuario FK
-        int id_ocorrencia FK
-        int id_tipo_ajuda FK
         string ds_ajuda
         datetime dt_ajuda
     }
+
     T_PPG_STATUS_OCORRENCIA {
         int id_status_ocorrencia PK
         string nm_status
     }
+
     T_PPG_TIPO_OCORRENCIA {
         int id_tipo_ocorrencia PK
         string nm_tipo_ocorrencia
     }
+
     T_PPG_NIVEL_URGENCIA {
         int id_nivel_urgencia PK
         string nm_nivel
     }
+
     T_PPG_TIPO_AJUDA {
         int id_tipo_ajuda PK
         string nm_tipo_ajuda
     }
+
     T_PPG_USUARIO {
         int id_usuario PK
         string nm_usuario
-        string nm_email UQ
+        string nm_email
         string nm_senha
         datetime dt_cadastro
     }
+
     T_PPG_TELEFONE {
         int id_telefone PK
         string nr_telefone
         string nr_ddd
         string nr_ddi
-        int id_usuario FK
     }
 
-    T_PPG_REGIAO ||--o| T_PPG_OCORRENCIA : "Relacao"
-    T_PPG_OCORRENCIA ||--o| T_PPG_AJUDA_REALIZADA : "Relacao"
-    T_PPG_STATUS_OCORRENCIA ||--o| T_PPG_OCORRENCIA : "Relacao"
-    T_PPG_TIPO_OCORRENCIA ||--o| T_PPG_OCORRENCIA : "Relacao"
-    T_PPG_NIVEL_URGENCIA ||--o| T_PPG_OCORRENCIA : "Relacao"
-    T_PPG_TIPO_AJUDA ||--o| T_PPG_AJUDA_REALIZADA : "Relacao"
-    T_PPG_USUARIO ||--o| T_PPG_AJUDA_REALIZADA : "Relacao"
-    T_PPG_USUARIO ||--o| T_PPG_TELEFONE : "Relacao"
+    T_PPG_REGIAO ||--o| T_PPG_OCORRENCIA : "Contém"
+    T_PPG_OCORRENCIA ||--o| T_PPG_AJUDA_REALIZADA : "Gerada por"
+    T_PPG_STATUS_OCORRENCIA ||--o| T_PPG_OCORRENCIA : "Determina Status"
+    T_PPG_TIPO_OCORRENCIA ||--o| T_PPG_OCORRENCIA : "Define Tipo"
+    T_PPG_NIVEL_URGENCIA ||--o| T_PPG_OCORRENCIA : "Define Urgência"
+    T_PPG_TIPO_AJUDA ||--o| T_PPG_AJUDA_REALIZADA : "Classifica Ajuda"
+    T_PPG_USUARIO ||--o| T_PPG_AJUDA_REALIZADA : "Realiza"
+    T_PPG_USUARIO ||--o| T_PPG_TELEFONE : "Possui"
 ```
