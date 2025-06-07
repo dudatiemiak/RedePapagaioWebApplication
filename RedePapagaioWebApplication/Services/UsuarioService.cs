@@ -49,12 +49,6 @@ namespace RedePapagaioWebApplication.Services
                 throw new ArgumentException("A senha do usuário não pode ser vazia.");
             }
 
-            var existingUser = await _repository.GetByEmailAsync(usuario.Email);
-            if (existingUser != null)
-            {
-                throw new ArgumentException("Já existe um usuário com este email.");
-            }
-
             await _repository.AddAsync(usuario);
         }
 
@@ -115,14 +109,5 @@ namespace RedePapagaioWebApplication.Services
             return await _repository.GetByNameAsync(nome);
         }
 
-        public async Task<Usuario?> GetUsuarioByEmailAsync(string email)
-        {
-            if (string.IsNullOrEmpty(email))
-            {
-                throw new ArgumentException("O email não pode ser vazio.");
-            }
-
-            return await _repository.GetByEmailAsync(email);
-        }
     }
 }
