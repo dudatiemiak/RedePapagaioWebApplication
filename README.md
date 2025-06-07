@@ -1,27 +1,27 @@
-# Rewriting the content and ensuring the code block is complete
 
-# **RedePapagaio: Sistema de Controle de Desastres Naturais**
+# 🌐 **RedePapagaio: Sistema de Controle de Desastres Naturais**
 
-## **Visão Geral**
+## 📌 Visão Geral
 
-O **RedePapagaio** é um sistema desenvolvido para o controle de ocorrências de desastres naturais, gerenciar a ajuda realizada pelos usuários e conectar ONGs e voluntários a regiões afetadas. O sistema possui uma API RESTful, projetada com **.NET 8** e utiliza **Oracle** como banco de dados. O projeto foi desenvolvido com ênfase na escalabilidade e usabilidade para cenários de desastres.
-
----
-
-## **Tecnologias Utilizadas**
-
-- **Backend**: .NET 8 (C#)
-- **Banco de Dados**: Oracle Database
-- **ORM**: Entity Framework Core
-- **API Documentation**: Swagger
+O **RedePapagaio** é um sistema desenvolvido para o controle de ocorrências de desastres naturais, gerenciamento de ajuda realizada por usuários e conexão entre ONGs, voluntários e regiões afetadas.  
+A API RESTful foi construída com **.NET 8** e utiliza **Oracle Database**, prezando pela **escalabilidade** e **usabilidade** em cenários emergenciais.
 
 ---
 
-### **Diagramas**
+## 🧰 Tecnologias Utilizadas
 
-Aqui estão os diagramas que ilustram a arquitetura do sistema:
+- ✅ **Backend**: .NET 8 (C#)  
+- ✅ **Banco de Dados**: Oracle Database  
+- ✅ **ORM**: Entity Framework Core  
+- ✅ **Documentação da API**: Swagger  
 
-#### **Diagrama de Classes**
+---
+
+## 📐 Diagramas
+
+### 🧩 Diagrama Relacional (Mermaid)
+
+> Representação das entidades, atributos e seus relacionamentos no banco de dados:
 
 ```mermaid
 erDiagram
@@ -99,13 +99,18 @@ erDiagram
 
 ---
 
-###Desenvolvimento
-       - O projeto segue a arquitetura MVC (Model-View-Controller) e utiliza o Entity Framework Core para a manipulação dos dados no banco Oracle. Cada recurso da API é acessado via HTTP Requests, e o Swagger é utilizado para documentar as rotas.
+## 🧱 Estrutura do Projeto
+
+- O projeto segue o padrão de arquitetura **MVC (Model-View-Controller)**.
+- Utiliza o **Entity Framework Core** para manipulação dos dados no Oracle.
+- Cada recurso da API é acessado via **HTTP Requests**.
+- A documentação das rotas é gerada automaticamente via **Swagger**.
 
 ---
 
-###Configuração de banco de dados 
-    - Aqui está um exemplo de configuração do arquivo `appsettings.json` para o banco de dados. **Lembre-se de substituir os valores de usuário, senha, servidor e porta**:
+## ⚙️ Configuração do Banco de Dados
+
+> Exemplo do arquivo `appsettings.json` com a string de conexão:
 
 ```json
 {
@@ -121,32 +126,42 @@ erDiagram
   "AllowedHosts": "*"
 }
 ```
+
+> 🔐 **Atenção**: Lembre-se de substituir `<SEU_USUARIO>`, `<SUA_SENHA>`, `<SEU_SERVIDOR>`, `<PORTA>` e `<SERVICO>` com os dados reais.
+
 ---
 
-###Intruções de execução: 
- - Faça o clone do repositório
+## 🚀 Instruções de Execução
+
+### 1. Clone o repositório
+
 ```bash
 git clone https://github.com/username/redepapagaio.git
 cd redepapagaio
 ```
 
- - Execute esse comando para restaurar as dependencias:
+### 2. Restaure as dependências
+
 ```bash
 dotnet restore
 ```
 
- - Para compilar o projeto, execute:
+### 3. Compile o projeto
+
 ```bash
 dotnet build
 ```
 
- - Para rodar a aplicação, execute:
+### 4. Execute a aplicação
+
 ```bash
 dotnet run
 ```
 
 ---
 
-###Acessar o Swagger:
-    - Abra o navegador e vá até http://localhost:5169, onde você verá a interface do Swagger. A partir daí, você pode testar as rotas da API diretamente.
-    
+## 🌍 Acesso ao Swagger
+
+- Após rodar a aplicação, acesse:  
+  👉 [http://localhost:5169](http://localhost:5169)  
+- A interface do Swagger será exibida, permitindo testar todas as rotas da API de forma visual e interativa.
