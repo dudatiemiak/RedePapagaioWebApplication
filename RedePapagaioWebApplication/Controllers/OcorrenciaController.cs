@@ -47,7 +47,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Ocorrencia ocorrencia)
+        public async Task<ActionResult> Post(Ocorrencia ocorrencia)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] Ocorrencia ocorrencia)
+        public async Task<ActionResult> Put(int id, Ocorrencia ocorrencia)
         {
             try
             {

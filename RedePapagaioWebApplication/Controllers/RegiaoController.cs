@@ -47,7 +47,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Regiao regiao)
+        public async Task<ActionResult> Post(Regiao regiao)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] Regiao regiao)
+        public async Task<ActionResult> Put(int id, Regiao regiao)
         {
             try
             {

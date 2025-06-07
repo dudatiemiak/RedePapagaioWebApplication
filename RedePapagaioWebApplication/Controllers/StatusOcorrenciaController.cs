@@ -36,8 +36,7 @@ namespace RedePapagaioWebApplication.Controllers
             try
             {
                 var statusOcorrencia = await _statusOcorrenciaService.GetStatusOcorrenciaByIdAsync(id);
-                if (statusOcorrencia == null)
-                    return NotFound();
+                if (statusOcorrencia == null) return NotFound();
                 return Ok(statusOcorrencia);
             }
             catch (ArgumentException ex)
@@ -47,7 +46,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] StatusOcorrencia statusOcorrencia)
+        public async Task<ActionResult> Post(StatusOcorrencia statusOcorrencia)
         {
             try
             {
@@ -61,7 +60,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] StatusOcorrencia statusOcorrencia)
+        public async Task<ActionResult> Put(int id, StatusOcorrencia statusOcorrencia)
         {
             try
             {

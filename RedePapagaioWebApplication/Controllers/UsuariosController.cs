@@ -47,7 +47,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Usuario usuario)
+        public async Task<ActionResult> Post(Usuario usuario)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace RedePapagaioWebApplication.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] Usuario usuario)
+        public async Task<ActionResult> Put(int id, Usuario usuario)
         {
             try
             {
@@ -106,20 +106,5 @@ namespace RedePapagaioWebApplication.Controllers
             }
         }
 
-        [HttpGet("email/{email}")]
-        public async Task<ActionResult<Usuario>> GetByEmail(string email)
-        {
-            try
-            {
-                var usuario = await _usuarioService.GetUsuarioByEmailAsync(email);
-                if (usuario == null)
-                    return NotFound();
-                return Ok(usuario);
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { StatusCode = 400, Message = ex.Message });
-            }
-        }
     }
 }
