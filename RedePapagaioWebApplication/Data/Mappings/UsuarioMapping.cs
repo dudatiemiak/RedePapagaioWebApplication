@@ -16,6 +16,16 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.Property(u => u.Email).HasColumnName("NM_EMAIL").HasMaxLength(100).IsRequired();
             builder.Property(u => u.Senha).HasColumnName("NM_SENHA").HasMaxLength(255).IsRequired();
             builder.Property(u => u.DataCadastro).HasColumnName("DT_CADASTRO").IsRequired();
+
+            builder.HasMany(u => u.Telefones)  
+                .WithOne(t => t.Usuario) 
+                .HasForeignKey(t => t.UsuarioId)  
+                .OnDelete(DeleteBehavior.Cascade);  
+
+            builder.HasMany(u => u.AjudasRealizadas)  
+                .WithOne(a => a.Usuario)  
+                .HasForeignKey(a => a.UsuarioId)  
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

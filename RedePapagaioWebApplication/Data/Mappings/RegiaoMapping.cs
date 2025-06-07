@@ -16,6 +16,11 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.Property(r => r.Cidade).HasColumnName("NM_CIDADE").HasMaxLength(100);
             builder.Property(r => r.Estado).HasColumnName("NM_ESTADO").HasMaxLength(100);
             builder.Property(r => r.Pais).HasColumnName("NM_PAIS").HasMaxLength(100);
+
+            builder.HasMany(r => r.Ocorrencias)  
+                .WithOne(o => o.Regiao)  
+                .HasForeignKey(o => o.RegiaoId)  
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

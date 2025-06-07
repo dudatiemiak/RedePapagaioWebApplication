@@ -18,6 +18,21 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.Property(a => a.UsuarioId).HasColumnName("ID_USUARIO").IsRequired();
             builder.Property(a => a.OcorrenciaId).HasColumnName("ID_OCORRENCIA").IsRequired();
             builder.Property(a => a.TipoAjudaId).HasColumnName("ID_TIPO_AJUDA").IsRequired();
+
+            builder.HasOne(a => a.Usuario)
+                .WithMany(u => u.AjudasRealizadas)
+                .HasForeignKey(a => a.UsuarioId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(a => a.Ocorrencia)
+                .WithMany(o => o.AjudasRealizadas)
+                .HasForeignKey(a => a.OcorrenciaId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(a => a.TipoAjuda)
+                .WithMany(t => t.AjudasRealizadas)
+                .HasForeignKey(a => a.TipoAjudaId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

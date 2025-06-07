@@ -16,6 +16,11 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.Property(t => t.DDD).HasColumnName("NR_DDD").HasMaxLength(5).IsRequired();
             builder.Property(t => t.DDI).HasColumnName("NR_DDI").HasMaxLength(5).IsRequired();
             builder.Property(t => t.UsuarioId).HasColumnName("ID_USUARIO").IsRequired();
+
+            builder.HasOne(t => t.Usuario)
+                .WithMany(u => u.Telefones)
+                .HasForeignKey(t => t.UsuarioId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -13,6 +13,11 @@ namespace RedePapagaioWebApplication.Data.Mappings
 
             builder.Property(n => n.Id).HasColumnName("ID_NIVEL_URGENCIA").IsRequired();
             builder.Property(n => n.Nome).HasColumnName("NM_NIVEL").HasMaxLength(20).IsRequired();
+
+            builder.HasMany(n => n.Ocorrencias)  
+                .WithOne(o => o.NivelUrgencia)  
+                .HasForeignKey(o => o.NivelUrgenciaId)  
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
