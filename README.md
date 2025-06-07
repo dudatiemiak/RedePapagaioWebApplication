@@ -14,14 +14,8 @@ O **RedePapagaio** é um sistema desenvolvido para o controle de ocorrências de
 - **Banco de Dados**: Oracle Database
 - **ORM**: Entity Framework Core
 - **API Documentation**: Swagger
-- **Injeção de Dependência**: ASP.NET Core DI
-- **Testes**: XUnit (Testes Unitários)
 
 ---
-
-## **Arquitetura do Sistema**
-
-O sistema é composto por várias entidades inter-relacionadas, como **Usuário**, **Ocorrência**, **AjudaRealizada**, **Região**, **TipoOcorrencia** e **StatusOcorrencia**. Cada entidade possui relacionamentos de 1:N ou N:M com outras entidades, conforme a lógica do sistema.
 
 ### **Diagramas**
 
