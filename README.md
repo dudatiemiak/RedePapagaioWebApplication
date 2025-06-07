@@ -1,6 +1,5 @@
 # Rewriting the content and ensuring the code block is complete
 
-readme_content = """
 # **RedePapagaio: Sistema de Controle de Desastres Naturais**
 
 ## **Visão Geral**
