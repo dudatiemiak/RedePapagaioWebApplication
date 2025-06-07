@@ -1,3 +1,6 @@
+# Rewriting the content and ensuring the code block is complete
+
+readme_content = """
 # **RedePapagaio: Sistema de Controle de Desastres Naturais**
 
 ## **Visão Geral**
@@ -25,115 +28,76 @@ O sistema é composto por várias entidades inter-relacionadas, como **Usuário*
 
 Aqui estão os diagramas que ilustram a arquitetura do sistema:
 
-#### Diagrama de Classes
+#### **Diagrama de Classes**
 
-```mermaid
-classDiagram
-    class Usuario {
-        +int Id
-        +string Nome
-        +string Email
-        +string Senha
-        +DateTime DataCadastro
-        +List<AjudaRealizada> AjudasRealizadas
-    }
+                         +----------------------+
+                         |    T_PPG_REGIAO      |
+                         +----------------------+
+                         | PK id_regiao         |
+                         | nm_regiao            |
+                         | nm_cidade            |
+                         | nm_estado            |
+                         | nm_pais              |
+                         +----------------------+
+                                  |
+                                  | FK
+                                  |
+                         +----------------------+
+                         |  T_PPG_OCORRENCIA    |
+                         +----------------------+
+                         | PK id_ocorrencia     |
+                         | FK id_status_ocorrencia
+                         | FK id_nivel_urgencia |
+                         | FK id_regiao         |
+                         | FK id_tipo_ocorrencia|
+                         | ds_ocorrencia        |
+                         +----------------------+
+                                  |
+                                  | FK
+                                  |
+                         +------------------------+
+                         |  T_PPG_AJUDA_REALIZADA |
+                         +------------------------+
+                         | PK id_ajuda            |
+                         | FK id_usuario          |
+                         | FK id_ocorrencia       |
+                         | FK id_tipo_ajuda       |
+                         | ds_ajuda               |
+                         | dt_ajuda               |
+                         +------------------------+
 
-    class AjudaRealizada {
-        +int Id
-        +string Descricao
-        +DateTime DataAjuda
-        +int UsuarioId
-        +int OcorrenciaId
-        +int TipoAjudaId
-    }
++--------------------------+       +--------------------------+
+|    T_PPG_STATUS_OCORRENCIA |     |    T_PPG_TIPO_OCORRENCIA  |
++--------------------------+       +--------------------------+
+| PK id_status_ocorrencia   |       | PK id_tipo_ocorrencia     |
+| UQ nm_status              |       | UQ nm_tipo_ocorrencia      |
++--------------------------+       +--------------------------+
 
-    class Ocorrencia {
-        +int Id
-        +string Descricao
-        +int StatusOcorrenciaId
-        +int NivelUrgenciaId
-        +int RegiaoId
-        +int TipoOcorrenciaId
-        +List<AjudaRealizada> AjudasRealizadas
-    }
++--------------------------+       +------------------------+
+|   T_PPG_NIVEL_URGENCIA    |       |   T_PPG_TIPO_AJUDA     |
++--------------------------+       +------------------------+
+| PK id_nivel_urgencia      |       | PK id_tipo_ajuda        |
+| UQ nm_nivel               |       | UQ nm_tipo_ajuda         |
++--------------------------+       +------------------------+
 
-    class Regiao {
-        +int Id
-        +string Nome
-        +string Cidade
-        +string Estado
-        +string Pais
-    }
-
-    class TipoOcorrencia {
-        +int Id
-        +string Nome
-    }
-
-    class StatusOcorrencia {
-        +int Id
-        +string Nome
-    }
-
-    class TipoAjuda {
-        +int Id
-        +string Nome
-    }
-
-    Usuario "1" -- "N" AjudaRealizada : Faz
-    Ocorrencia "1" -- "N" AjudaRealizada : Tem
-    Ocorrencia "1" -- "1" StatusOcorrencia : Tem
-    Ocorrencia "1" -- "1" NivelUrgencia : Tem
-    Ocorrencia "1" -- "1" Regiao : Está em
-    Ocorrencia "1" -- "1" TipoOcorrencia : Tem
-```
----
-
-###Desenvolvimento
-
-O projeto segue a arquitetura MVC (Model-View-Controller) e utiliza o Entity Framework Core para a manipulação dos dados no banco Oracle. Cada recurso da API é acessado via HTTP Requests, e o Swagger é utilizado para documentar as rotas.
-
----
-
-###Configuração de banco de dados.
-
-{
-    "ConnectionStrings": {
-      "DefaultConnection": "User Id=<SEU_USUARIO>;Password=<SUA_SENHA>;Data Source=<SEU_SERVIDOR>:<PORTA>/<SERVICO>"
-    },
-      "Logging": {
-          "LogLevel": {
-              "Default": "Information",
-              "Microsoft.AspNetCore": "Warning"
-          }
-      },
-      "AllowedHosts": "*"
-}
-
-###Instruções de Execução
-Baixar o Repositório
-
-Faça o clone do repositório:
-
-git clone https://github.com/username/redepapagaio.git
-cd redepapagaio
-Restaurar Dependências
-
-Execute o comando para restaurar as dependências:
-
-dotnet restore
-Compilar o Projeto
-
-Para compilar o projeto, execute:
-
-dotnet build
-Executar o Projeto
-
-Para rodar a aplicação, execute:
-
-dotnet run
-Acessar o Swagger
-
-Abra o navegador e vá até http://localhost:5169, onde você verá a interface do Swagger. A partir daí, você pode testar as rotas da API diretamente.
-
-###Testes
+                         +----------------------+
+                         |    T_PPG_USUARIO     |
+                         +----------------------+
+                         | PK id_usuario        |
+                         | nm_usuario           |
+                         | UQ nm_email          |
+                         | nm_senha             |
+                         | dt_cadastro          |
+                         +----------------------+
+                                  |
+                                  | FK
+                                  |
+                         +---------------------+
+                         |   T_PPG_TELEFONE    |
+                         +---------------------+
+                         | PK id_telefone      |
+                         | nr_telefone         |
+                         | nr_ddd              |
+                         | nr_ddi              |
+                         | FK id_usuario       |
+                         +---------------------+
