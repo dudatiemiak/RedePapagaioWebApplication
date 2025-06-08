@@ -51,6 +51,7 @@ namespace RedePapagaioWebApplication.Controllers
         {
             try
             {
+                
                 await _telefoneService.AddTelefoneAsync(telefone);
                 return CreatedAtAction(nameof(Get), new { id = telefone.Id }, telefone);
             }

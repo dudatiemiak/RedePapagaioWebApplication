@@ -1,36 +1,32 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace RedePapagaioWebApplication.Models
 {
     public class Ocorrencia
     {
-        [Key]
         public int Id { get; set; }
 
-        [MaxLength(500)]
-        public string Descricao { get; set; } = string.Empty;
+        public string Descricao { get; set; }
 
         public int StatusOcorrenciaId { get; set; }
-        public StatusOcorrencia StatusOcorrencia { get; set; } = new StatusOcorrencia();
+        [JsonIgnore]
+        public StatusOcorrencia? StatusOcorrencia { get; set; } 
 
         public int NivelUrgenciaId { get; set; }
-        public NivelUrgencia NivelUrgencia { get; set; } = new NivelUrgencia();
+        [JsonIgnore]
+        public NivelUrgencia? NivelUrgencia { get; set; } 
 
         public int RegiaoId { get; set; }
-        public Regiao Regiao { get; set; } = new Regiao();
+        [JsonIgnore]
+        public Regiao? Regiao { get; set; } 
 
         public int TipoOcorrenciaId { get; set; }
-        public TipoOcorrencia TipoOcorrencia { get; set; } = new TipoOcorrencia();
-        public List<AjudaRealizada>? AjudasRealizadas { get; set; } = new List<AjudaRealizada>();  
+        [JsonIgnore]
+        public TipoOcorrencia? TipoOcorrencia { get; set; }
 
+        [JsonIgnore]
+        public List<AjudaRealizada>? AjudasRealizadas { get; set; }
 
-        public Ocorrencia()
-        {
-            StatusOcorrencia = new StatusOcorrencia();  
-            NivelUrgencia = new NivelUrgencia();       
-            Regiao = new Regiao();                      
-            TipoOcorrencia = new TipoOcorrencia();     
-            AjudasRealizadas = new List<AjudaRealizada>();
-        }
     }
 }

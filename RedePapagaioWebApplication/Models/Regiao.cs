@@ -1,29 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace RedePapagaioWebApplication.Models
 {
     public class Regiao
     {
-        [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(100)]
-        public string Nome { get; set; } = string.Empty;
+        public string Nome { get; set; } 
 
-        [MaxLength(100)]
-        public string Cidade { get; set; } = string.Empty;
+        public string Cidade { get; set; } 
 
-        [MaxLength(100)]
-        public string Estado { get; set; } = string.Empty;
+        public string Estado { get; set; } 
 
-        [MaxLength(100)]
-        public string Pais { get; set; } = string.Empty;
+        public string Pais { get; set; } 
 
-        public List<Ocorrencia>? Ocorrencias { get; set; } = new List<Ocorrencia>();
+        [JsonIgnore]
+        public List<Ocorrencia>? Ocorrencias { get; set; } 
 
-        public Regiao()
-        {
-            Ocorrencias = new List<Ocorrencia>();  
-        }
     }
 }

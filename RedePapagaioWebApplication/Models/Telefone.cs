@@ -1,27 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace RedePapagaioWebApplication.Models
 {
     public class Telefone
     {
-        [Key]
         public int Id { get; set; }
 
-        [MaxLength(15)]
-        public string Numero { get; set; } = string.Empty;
+        public string Numero { get; set; }
 
-        [MaxLength(5)]
-        public string DDD { get; set; } = string.Empty;
+        public string DDD { get; set; } 
 
-        [MaxLength(5)]
-        public string DDI { get; set; } = string.Empty;
-
+        public string DDI { get; set; } 
         public int UsuarioId { get; set; }
-        public Usuario Usuario { get; set; } = new Usuario();
+        [JsonIgnore]
+        public Usuario? Usuario { get; set; }
 
-        public Telefone()
-        {
-            Usuario = new Usuario();
-        }
     }
 }

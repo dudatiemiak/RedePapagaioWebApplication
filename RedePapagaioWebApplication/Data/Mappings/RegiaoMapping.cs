@@ -11,7 +11,7 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.ToTable("T_PPG_REGIAO");
             builder.HasKey(r => r.Id);
 
-            builder.Property(r => r.Id).HasColumnName("ID_REGIAO").IsRequired();
+            builder.Property(r => r.Id).HasColumnName("ID_REGIAO").ValueGeneratedOnAdd().IsRequired();
             builder.Property(r => r.Nome).HasColumnName("NM_REGIAO").HasMaxLength(100).IsRequired();
             builder.Property(r => r.Cidade).HasColumnName("NM_CIDADE").HasMaxLength(100);
             builder.Property(r => r.Estado).HasColumnName("NM_ESTADO").HasMaxLength(100);

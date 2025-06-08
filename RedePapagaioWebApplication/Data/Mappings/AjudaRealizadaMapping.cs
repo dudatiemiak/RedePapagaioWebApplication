@@ -11,7 +11,7 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.ToTable("T_PPG_AJUDA_REALIZADA");
             builder.HasKey(a => a.Id);
 
-            builder.Property(a => a.Id).HasColumnName("ID_AJUDA").IsRequired();
+            builder.Property(a => a.Id).HasColumnName("ID_AJUDA").ValueGeneratedOnAdd().IsRequired();
             builder.Property(a => a.Descricao).HasColumnName("DS_AJUDA").HasMaxLength(500).IsRequired();
             builder.Property(a => a.DataAjuda).HasColumnName("DT_AJUDA").IsRequired();
 

@@ -1,30 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace RedePapagaioWebApplication.Models
 {
     public class Usuario
     {
-        [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(100)]
-        public string Nome { get; set; } = string.Empty;
+        public string Nome { get; set; } 
 
-        [Required, EmailAddress, MaxLength(100)]
-        public string Email { get; set; } = string.Empty;
-
-        [Required, MaxLength(255)]
-        public string Senha { get; set; } = string.Empty;
+        public string Email { get; set; } 
+        public string Senha { get; set; } 
 
         public DateTime DataCadastro { get; set; }
 
-        public List<AjudaRealizada> AjudasRealizadas { get; set; } = new List<AjudaRealizada>();
-        public List<Telefone> Telefones { get; set; } = new List<Telefone>();
+        [JsonIgnore]
+        public List<AjudaRealizada>? AjudasRealizadas { get; set; }
+        [JsonIgnore]
+        public List<Telefone>? Telefones { get; set; } 
 
-        public Usuario()
-        {
-            AjudasRealizadas = new List<AjudaRealizada>();  
-            Telefones = new List<Telefone>();                
-        }
+       
     }
 }

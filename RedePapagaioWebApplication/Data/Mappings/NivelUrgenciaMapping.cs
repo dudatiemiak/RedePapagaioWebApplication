@@ -11,7 +11,7 @@ namespace RedePapagaioWebApplication.Data.Mappings
             builder.ToTable("T_PPG_NIVEL_URGENCIA");
             builder.HasKey(n => n.Id);
 
-            builder.Property(n => n.Id).HasColumnName("ID_NIVEL_URGENCIA").IsRequired();
+            builder.Property(n => n.Id).HasColumnName("ID_NIVEL_URGENCIA").ValueGeneratedOnAdd().IsRequired();
             builder.Property(n => n.Nome).HasColumnName("NM_NIVEL").HasMaxLength(20).IsRequired();
 
             builder.HasMany(n => n.Ocorrencias)  

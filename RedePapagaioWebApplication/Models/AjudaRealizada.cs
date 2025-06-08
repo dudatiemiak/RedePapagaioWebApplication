@@ -1,31 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace RedePapagaioWebApplication.Models
 {
     public class AjudaRealizada
     {
-        [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(500)]
-        public string Descricao { get; set; } = string.Empty;
+        public string Descricao { get; set; }
 
         public DateTime DataAjuda { get; set; }
 
         public int UsuarioId { get; set; }
-        public Usuario Usuario { get; set; } = new Usuario();
+        [JsonIgnore]
+        public Usuario? Usuario { get; set; } 
 
         public int OcorrenciaId { get; set; }
-        public Ocorrencia Ocorrencia { get; set; } = new Ocorrencia();
+        [JsonIgnore]
+        public Ocorrencia? Ocorrencia { get; set; } 
 
         public int TipoAjudaId { get; set; }
-        public TipoAjuda TipoAjuda { get; set; } = new TipoAjuda();
+        [JsonIgnore]
+        public TipoAjuda? TipoAjuda { get; set; } 
 
-        public AjudaRealizada()
-        {
-            Usuario = new Usuario();
-            Ocorrencia = new Ocorrencia();
-            TipoAjuda = new TipoAjuda();
-        }
+       
     }
 }
