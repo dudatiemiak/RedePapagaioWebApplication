@@ -174,4 +174,4 @@ dotnet run
 
 ### Regiao
 
-![Exemplo](img/Captura de tela 2025-06-08 091837.png)
+![Exemplo](img/teste_regiao_1.png)
