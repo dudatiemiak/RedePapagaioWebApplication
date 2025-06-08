@@ -170,6 +170,8 @@ dotnet run
 
 ## Testes
 
+---
+
 ### Regiao
 
-
+![Exemplo](img/Captura de tela 2025-06-08 091837.png)
