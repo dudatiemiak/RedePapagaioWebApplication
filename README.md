@@ -174,4 +174,4 @@ dotnet run
 
 ### Regiao
 
-![Exemplo](img/teste_regiao_1.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_regiao_1.png)
