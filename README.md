@@ -173,5 +173,14 @@ dotnet run
 ---
 
 ### Regiao
-
+ - Inserindo uma região
 ![Exemplo](RedePapagaioWebApplication/img/teste_regiao_1.png)
+- Buscando todos
+![Exemplo](RedePapagaioWebApplication/img/teste_regiao_2.png)
+- Buscando pro id
+![Exemplo](RedePapagaioWebApplication/img/teste_regiao_3.png)
+- Atualizando
+![Exemplo](RedePapagaioWebApplication/img/teste_regiao_4.png)
+- Deletando
+![Exemplo](RedePapagaioWebApplication/img/teste_regiao_5.png)
+
