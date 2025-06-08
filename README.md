@@ -171,5 +171,4 @@ dotnet run
 ## Testes
 
 ### Regiao
-
-
+![Exemplo](RedePapagaioWebApplication/img/Captura de tela 2025-06-08 091837.png)
