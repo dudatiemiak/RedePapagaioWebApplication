@@ -165,3 +165,11 @@ dotnet run
 - Após rodar a aplicação, acesse:  
   👉 [http://localhost:5169](http://localhost:5169)  
 - A interface do Swagger será exibida, permitindo testar todas as rotas da API de forma visual e interativa.
+
+---
+
+## Testes
+
+### Regiao
+
+
