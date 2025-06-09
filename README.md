@@ -232,67 +232,67 @@ dotnet run
 
 ### Telefone
  - Inserindo
-![Exemplo](RedePapagaioWebApplication/img/telefone_1.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_telefone_1.png)
  - Buscando todos
-![Exemplo](RedePapagaioWebApplication/img/telefone_2.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_telefone_2.png)
  - Buscando por id
-![Exemplo](RedePapagaioWebApplication/img/telefone_3.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_telefone_3.png)
   - Atualizando
-![Exemplo](RedePapagaioWebApplication/img/telefone_4.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_telefone_4.png)
  - Deletando
-![Exemplo](RedePapagaioWebApplication/img/telefone_5.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_telefone_5.png)
  - Buscando telefone por id de usuario
-![Exemplo](RedePapagaioWebApplication/img/telefone_6.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_telefone_6.png)
 
 ### TipoAjuda
  - Inserindo
-![Exemplo](RedePapagaioWebApplication/img/tpa_1.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpa_1.png)
  - Buscando todos
-![Exemplo](RedePapagaioWebApplication/img/tpa_2.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpa_2.png)
  - Buscando por id
-![Exemplo](RedePapagaioWebApplication/img/tpa_3.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpa_3.png)
  - Atualizando
-![Exemplo](RedePapagaioWebApplication/img/tpa_4.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpa_4.png)
  - Deletando
-![Exemplo](RedePapagaioWebApplication/img/tpa_5.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpa_5.png)
 
 ### TipoOcorrencia
  - Inserindo
-![Exemplo](RedePapagaioWebApplication/img/tpo_1.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpo_1.png)
  - Buscando por todos
-![Exemplo](RedePapagaioWebApplication/img/tpo_2.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpo_2.png)
  - Buscando por id
-![Exemplo](RedePapagaioWebApplication/img/tpo_3.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpo_3.png)
 - Atualizando
-![Exemplo](RedePapagaioWebApplication/img/tpo_4.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpo_4.png)
  - Deletando
-![Exemplo](RedePapagaioWebApplication/img/tpo_5.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_tpo_5.png)
 
 ### NivelUrgencia
  - Inserindo
-![Exemplo](RedePapagaioWebApplication/img/urgencia_1.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_urgencia_1.png)
  - Buscando por todos
-![Exemplo](RedePapagaioWebApplication/img/urgencia_2.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_urgencia_2.png)
  - Buscando por id
-![Exemplo](RedePapagaioWebApplication/img/urgencia_3.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_urgencia_3.png)
  - Atualizando
-![Exemplo](RedePapagaioWebApplication/img/urgencia_4.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_urgencia_4.png)
  - Deletando
-![Exemplo](RedePapagaioWebApplication/img/urgencia_5.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_urgencia_5.png)
 
 ### Usuario
  - Inserindo
-![Exemplo](RedePapagaioWebApplication/img/usuario_1.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_usuario_1.png)
  - Buscando por todos
-![Exemplo](RedePapagaioWebApplication/img/usuario_2.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_usuario_2.png)
  - Buscando por id
-![Exemplo](RedePapagaioWebApplication/img/usuario_3.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_usuario_3.png)
  - Atualizando
-![Exemplo](RedePapagaioWebApplication/img/usuario_4.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_usuario_4.png)
  - Deletando
-![Exemplo](RedePapagaioWebApplication/img/usuario_5.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_usuario_5.png)
  - Buscando usuario por nome
-![Exemplo](RedePapagaioWebApplication/img/usuario_6.png)
+![Exemplo](RedePapagaioWebApplication/img/teste_usuario_6.png)
 
 ---
 
