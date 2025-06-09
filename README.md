@@ -177,10 +177,131 @@ dotnet run
 ![Exemplo](RedePapagaioWebApplication/img/teste_regiao_1.png)
 - Buscando todos
 ![Exemplo](RedePapagaioWebApplication/img/teste_regiao_2.png)
-- Buscando pro id
+- Buscando por id
 ![Exemplo](RedePapagaioWebApplication/img/teste_regiao_3.png)
 - Atualizando
 ![Exemplo](RedePapagaioWebApplication/img/teste_regiao_4.png)
 - Deletando
 ![Exemplo](RedePapagaioWebApplication/img/teste_regiao_5.png)
 
+### AjudaRealizada
+ - Inserindo uma ajuda realizada
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_1.png)
+ - Buscando todas
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_3.png)
+ - Atualizando
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_5.png)
+ - Buscando ajuda realizada por id de usuário
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_6.png)
+ - Buscando ajuda realizada por id de ocorrência
+![Exemplo](RedePapagaioWebApplication/img/teste_ajuda_7.png)
+
+### Ocorrencia
+ - Inserindo ocorrencia
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_1.png)
+ - Buscando todas
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_2.png)
+ - Buscando ocorrencia por id
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_3.png)
+ - Atualizando 
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_5.png)
+ - Buscando ocorrencia por id de status
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_6.png)
+ - Buscando ocorrencia por id de nivel urgencia
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_7.png)
+ - Buscando ocorrencia por id de tipo ocorrencia
+![Exemplo](RedePapagaioWebApplication/img/teste_ocorrencia_8.png)
+
+### Status 
+ - Inserindo
+![Exemplo](RedePapagaioWebApplication/img/teste_status_1.png)
+ - Buscando todos
+![Exemplo](RedePapagaioWebApplication/img/teste_status_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/teste_status_3.png)
+ - Atualizando
+![Exemplo](RedePapagaioWebApplication/img/teste_status_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/teste_status_5.png)
+
+### Telefone
+ - Inserindo
+![Exemplo](RedePapagaioWebApplication/img/telefone_1.png)
+ - Buscando todos
+![Exemplo](RedePapagaioWebApplication/img/telefone_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/telefone_3.png)
+  - Atualizando
+![Exemplo](RedePapagaioWebApplication/img/telefone_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/telefone_5.png)
+ - Buscando telefone por id de usuario
+![Exemplo](RedePapagaioWebApplication/img/telefone_6.png)
+
+### TipoAjuda
+ - Inserindo
+![Exemplo](RedePapagaioWebApplication/img/tpa_1.png)
+ - Buscando todos
+![Exemplo](RedePapagaioWebApplication/img/tpa_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/tpa_3.png)
+ - Atualizando
+![Exemplo](RedePapagaioWebApplication/img/tpa_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/tpa_5.png)
+
+### TipoOcorrencia
+ - Inserindo
+![Exemplo](RedePapagaioWebApplication/img/tpo_1.png)
+ - Buscando por todos
+![Exemplo](RedePapagaioWebApplication/img/tpo_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/tpo_3.png)
+- Atualizando
+![Exemplo](RedePapagaioWebApplication/img/tpo_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/tpo_5.png)
+
+### NivelUrgencia
+ - Inserindo
+![Exemplo](RedePapagaioWebApplication/img/urgencia_1.png)
+ - Buscando por todos
+![Exemplo](RedePapagaioWebApplication/img/urgencia_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/urgencia_3.png)
+ - Atualizando
+![Exemplo](RedePapagaioWebApplication/img/urgencia_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/urgencia_5.png)
+
+### Usuario
+ - Inserindo
+![Exemplo](RedePapagaioWebApplication/img/usuario_1.png)
+ - Buscando por todos
+![Exemplo](RedePapagaioWebApplication/img/usuario_2.png)
+ - Buscando por id
+![Exemplo](RedePapagaioWebApplication/img/usuario_3.png)
+ - Atualizando
+![Exemplo](RedePapagaioWebApplication/img/usuario_4.png)
+ - Deletando
+![Exemplo](RedePapagaioWebApplication/img/usuario_5.png)
+ - Buscando usuario por nome
+![Exemplo](RedePapagaioWebApplication/img/usuario_6.png)
+
+---
+
+## 👨‍💻 Integrantes do Grupo
+
+| Nome                                      | RM       | Turma  |
+|-------------------------------------------|----------|--------|
+| Eduarda Tiemi Akamini Machado             | 554756   | 2TDSPH |
+| Felipe Pizzinato Bigatto                  | 555141   | 2TDSPH |
+| Gustavo de Oliveira Turci Sandrini        | 557505   | 2TDSPW |
+
+---
